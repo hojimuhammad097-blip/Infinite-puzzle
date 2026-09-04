@@ -1,15 +1,14 @@
-name: infinite_puzzle
-description: Infinite Puzzle Game with Avatar Shop
-publish_to: 'none'
-version: 1.0.0+1
+    name: infinite_puzzle
+        description: Infinite Puzzle Game with Avatar Shop
+            publish_to: 'none'
+                version: 1.0.0+1
 
-environment:
-  sdk: '>=3.0.0 <4.0.0'
+                    environment:
+                          sdk: '>=3.0.0 <4.0.0'
 
-  dependencies:
-    flutter:
-        sdk: flutter
+                              dependencies:
+                                    flutter:
+                                            sdk: flutter
 
-
-          flutter:
-            uses-material-design: true
+                                                flutter:
+                                                      uses-material-design: true
