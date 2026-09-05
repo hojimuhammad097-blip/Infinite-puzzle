@@ -1,10 +1,19 @@
 workflows:
   android-build:
     name: Android Build
+    instance_type: mac_mini_m2
     environment:
       flutter: 3.22.3
     scripts:
-      - flutter pub get
-      - flutter build apk --release
+      - name: Clean
+        script: |
+          flutter clean
+          cd android && ./gradlew clean && cd ..
+      - name: Get packages
+        script: flutter pub get
+      - name: Upgrade packages
+        script: flutter pub upgrade
+      - name: Build APK
+        script: flutter build apk --release --no-tree-shake-icons
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
