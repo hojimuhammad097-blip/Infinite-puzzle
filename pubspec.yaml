@@ -10,4 +10,4 @@ dependencies:
 flutter:
   uses-material-design: true
   android:
-    enableAndroidX: true
+
