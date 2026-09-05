@@ -28,3 +28,5 @@ flutter:
 
 dependency_overrides:
   flutter_plugin_android_lifecycle: ^2.0.22
+  plugin_platform_interface: ^2.1.8
+  meta: ^1.12.0
