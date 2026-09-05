@@ -2,19 +2,31 @@ workflows:
   android-build:
     name: Android Build
     instance_type: mac_mini_m2
+    max_build_duration: 60
     environment:
       flutter: 3.22.3
+      xcode: latest
+      cocoapods: default
     scripts:
-      - name: Clean
+      - name: Flutter Clean
         script: |
           flutter clean
+      
+      - name: Android Gradle Clean
+        script: |
           cd android
           chmod +x ./gradlew
           ./gradlew clean
           cd ..
-      - name: Get packages
+      
+      - name: Get Packages
         script: flutter pub get
-      - name: Build
-        script: flutter build apk --release
+      
+      - name: Upgrade Packages - Fix V1 Embedding
+        script: flutter pub upgrade
+      
+      - name: Build APK
+        script: flutter build apk --release --no-tree-shake-icons
+    
     artifacts:
       - build/app/outputs/flutter-apk/*.apk
