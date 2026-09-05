@@ -1,4 +1,4 @@
-    package com.example.infinite_puzzle
+    package com.example.infinitepuzzle
 
     import io.flutter.embedding.android.FlutterActivity
 
