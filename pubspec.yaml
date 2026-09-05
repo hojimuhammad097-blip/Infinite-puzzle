@@ -8,6 +8,6 @@ dependencies:
     flutter:
         sdk: flutter
 flutter:
-    uses-material-design: true
-      android:
-        enableAndroidX: true
+  uses-material-design: true
+  android:
+    enableAndroidX: true
