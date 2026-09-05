@@ -5,6 +5,6 @@ workflows:
       flutter: 3.22.3
     scripts:
       - flutter pub get
-      - flutter build apk ---releasel
-      artifacts:
-        - build/app/outputs/flutter-apk/*.apk
+      - flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/*.apk
