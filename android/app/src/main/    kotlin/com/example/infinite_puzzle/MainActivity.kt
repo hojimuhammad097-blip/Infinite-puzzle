@@ -1,6 +1,0 @@
-package com.example.infinite_puzzle
-
-import io.flutter.embedding.android.FlutterActivity
-
-class MainActivity: FlutterActivity() {
-}
