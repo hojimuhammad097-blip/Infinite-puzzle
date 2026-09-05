@@ -1,14 +1,32 @@
 name: infinite_puzzle
-description: Infinite Puzzle Game with Avatar Shop
-publish_to: "none"
+description: A new Flutter project.
+publish_to: 'none'
 version: 1.0.0+1
+
 environment:
-  sdk: ">=3.4.0 <4.0.0"
-  flutter: ">=3.22.0"
+  sdk: '>=3.3.0 <4.0.0'
+
 dependencies:
-    flutter:
-        sdk: flutter
+  flutter:
+    sdk: flutter
+
+  # ===== ОБЯЗАТЕЛЬНЫЕ ДЛЯ FLUTTER 3.22 - БЕЗ V1 =====
+  cupertino_icons: ^1.0.8
+  shared_preferences: ^2.3.2
+  url_launcher: ^6.3.0
+  path_provider: ^2.1.4
+  http: ^1.2.2
+  provider: ^6.1.2
+  flutter_svg: ^2.0.9
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
 flutter:
   uses-material-design: true
-
-
+  
+  # Если есть картинки, раскомментируй:
+  # assets:
+  #   - assets/images/
