@@ -1,4 +1,4 @@
-<manifest package="com.example.infinite_puzzle">
+<manifest package="com.example.infinitepuzzle">
    <application
         android:label="infinite_puzzle"
         android:name="${applicationName}"
