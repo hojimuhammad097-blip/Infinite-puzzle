@@ -1,6 +1,6 @@
 workflows:
   android-build:
-    name: Android Build V2 Force
+    name: Android Build V2 Force Cache Clean
     instance_type: mac_mini_m2
     max_build_duration: 60
     environment:
@@ -13,6 +13,7 @@ workflows:
           flutter clean
           rm -rf android/.gradle
           rm -rf ~/.gradle/caches
+          rm -rf build
       
       - name: Android Gradle Clean
         script: |
@@ -25,15 +26,6 @@ workflows:
         script: |
           flutter pub get
           flutter pub deps
-      
-      - name: Check For V1 Plugins
-        script: |
-          echo "=== ИЩЕМ V1 ==="
-          flutter pub deps | grep -i lifecycle
-          grep -r "FlutterActivity" android/ || echo "V1 Activity not found"
-      
-      - name: Upgrade Packages
-        script: flutter pub upgrade
       
       - name: Build APK
         script: flutter build apk --release --no-tree-shake-icons
